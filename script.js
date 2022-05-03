@@ -26,6 +26,13 @@ for (let i = 0; i < bntsOpenModal.length; i++)
 btnCloseModal.addEventListener('click', closeModal);
 overlay.addEventListener('click', closeModal);
 
+document.addEventListener('keydown', function(e) {
+  console.log(e.key);
+  if (e.key === 'Escape') {
+    closeModal();
+  }
+})
+
 // tidak boleh DRY, jadi di deklarasikan dulu diatas
 //---------------------before refactoring---------------
 // btnCloseModal.addEventListener('click', function() {
